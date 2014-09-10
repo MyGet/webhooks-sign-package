@@ -23,7 +23,7 @@ First of all, deploy NuGet Signature to a web server, for example Microsoft Azur
 
 * ```Signature:KeyFile``` - path to the PFX file to use when signing
 * ```Signature:KeyFilePassword``` - private key/password for using the PFX file
-* ```Signature:PackageIdSuffix``` - suffix for signed package id's. Can be empty or something liek ".Signed"
+* ```Signature:PackageIdSuffix``` - suffix for signed package id's. Can be empty or something like ".Signed"
 * ```Signature:NuGetFeedUrl``` - NuGet feed to push signed packages to
 * ```Signature:NuGetFeedApiKey``` - API key for pushing packages to the above feed
 
