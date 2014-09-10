@@ -1,6 +1,6 @@
 # NuGet Signature
 
-Library and web project that can sign NuGet packages, for example triggered by MyGet Webhooks.
+Library and web project that can sign NuGet packages, for example triggered by MyGet Webhooks. Read [my blog post](http://blog.maartenballiauw.be/post/2014/09/10/Automatically-strong-name-signing-NuGet-packages.aspx) for more information.
 
 The project makes use of the excellent work by [Werner van Deventer](https://twitter.com/brutaldev) described in his blog post [".NET Assembly Strong-Name Signer"](http://brutaldev.com/post/2013/10/18/NET-Assembly-Strong-Name-Signer).
 
@@ -23,7 +23,7 @@ First of all, deploy NuGet Signature to a web server, for example Microsoft Azur
 
 * ```Signature:KeyFile``` - path to the PFX file to use when signing
 * ```Signature:KeyFilePassword``` - private key/password for using the PFX file
-* ```Signature:PackageIdSuffix``` - suffix for signed package id's. Can be empty or something like ".Signed"
+* ```Signature:PackageIdSuffix``` - suffix for signed package id's. Can be empty or something like ```.Signed```
 * ```Signature:NuGetFeedUrl``` - NuGet feed to push signed packages to
 * ```Signature:NuGetFeedApiKey``` - API key for pushing packages to the above feed
 
@@ -35,9 +35,9 @@ The configuration in the Microsoft Azure Management Dashboard could look like th
 
 For the MyGet feed you wish to sign packages, configure a new HTTP Post webhook. The following options must be configured:
 
-* ```URL to POST JSON data to``` - URL to the deployed NuGet Signature API, for example ```http://signpackage.azurewebsites.net/api/sign``` (do not forget the ```/api/sign```)
-* ```Content type``` - set to ```application/json```
-* ```Events that trigger this web hook``` - make sure that only ```Package Added``` is selected
+* **URL to POST JSON data to** - URL to the deployed NuGet Signature API, for example ```http://signpackage.azurewebsites.net/api/sign``` (do not forget the ```/api/sign```)
+* ***Content type*** - set to ```application/json```
+* ***Events that trigger this web hook*** - make sure that only ```Package Added``` is selected
 
 ![MyGet webhook configuration](https://raw.githubusercontent.com/maartenba/nuget-signature/master/docs/edit-webhook.png)
 
