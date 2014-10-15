@@ -29,7 +29,7 @@ First of all, deploy NuGet Signature to a web server, for example Microsoft Azur
 
 The configuration in the Microsoft Azure Management Dashboard could look like the following:
 
-![Azure Websites configuration](https://raw.githubusercontent.com/maartenba/nuget-signature/master/docs/azure-websites.png)
+![Azure Websites configuration](https://raw.githubusercontent.com/myget/webhooks-sign-package/master/docs/azure-websites.png)
 
 ### Setup a MyGet Webhook
 
@@ -39,6 +39,6 @@ For the MyGet feed you wish to sign packages, configure a new HTTP Post webhook.
 * ***Content type*** - set to ```application/json```
 * ***Events that trigger this web hook*** - make sure that only ```Package Added``` is selected
 
-![MyGet webhook configuration](https://raw.githubusercontent.com/maartenba/nuget-signature/master/docs/edit-webhook.png)
+![MyGet webhook configuration](https://raw.githubusercontent.com/myget/webhooks-sign-package/master/docs/edit-webhook.png)
 
 From now on, all packages that are added to your feed will be signed when the webhook is triggered. To sign existing packages, you'll have to use the library itself.
