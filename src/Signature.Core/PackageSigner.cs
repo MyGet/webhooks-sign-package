@@ -50,7 +50,7 @@ namespace Signature.Core
 
             foreach (var packagePart in package.GetParts())
             {
-                if (TrySignPackagePart(packagePart, signedPackage))
+                if (TrySignPackagePart(packagePart, keyPath, keyPassword, signedPackage))
                 {
                     signedPackage = true;
                 }
@@ -64,7 +64,7 @@ namespace Signature.Core
             return signedPackage;
         }
 
-        private static bool TrySignPackagePart(PackagePart packagePart, bool signedPackage)
+        private static bool TrySignPackagePart(PackagePart packagePart, string keyPath, string keyPassword, bool signedPackage)
         {
             if (packagePart.Uri.ToString().EndsWith(".exe")
                 || packagePart.Uri.ToString().EndsWith(".dll"))
@@ -81,7 +81,7 @@ namespace Signature.Core
                     {
                         signedPackage = true;
 
-                        SigningHelper.SignAssembly(tempPath);
+                        SigningHelper.SignAssembly(tempPath, keyPath ?? string.Empty, keyPassword ?? string.Empty);
 
                         using (var stream = new FileStream(tempPath, FileMode.OpenOrCreate, FileAccess.Read))
                         {
