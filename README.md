@@ -6,6 +6,8 @@ The project makes use of the excellent work by [Werner van Deventer](https://twi
 
 ## Using the library
 
+NuGet: [https://www.nuget.org/packages/Signature.Core](https://www.nuget.org/packages/Signature.Core)
+
 The ```Signature.Core``` comes with a class (```PackageSigner```) that can sign a NuGet package. Here's an example:
 
 	PackageSigner signer = new PackageSigner();
