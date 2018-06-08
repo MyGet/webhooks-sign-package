@@ -39,7 +39,7 @@ namespace Signature.Web.Controllers
                 // Sign the package
                 PackageSigner signer = new PackageSigner();
                 if (signer.SignPackage(tempPath, tempPath,
-                    ConfigurationManager.AppSettings["Signature:KeyFile"],
+                    System.Web.Hosting.HostingEnvironment.MapPath("~/" + ConfigurationManager.AppSettings["Signature:KeyFile"]),
                     ConfigurationManager.AppSettings["Signature:KeyFilePassword"],
                     payload.Payload.PackageIdentifier + ConfigurationManager.AppSettings["Signature:PackageIdSuffix"]))
                 {
