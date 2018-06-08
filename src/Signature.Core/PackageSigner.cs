@@ -81,7 +81,7 @@ namespace Signature.Core
                     {
                         signedPackage = true;
 
-                        SigningHelper.SignAssembly(tempPath, keyPath ?? string.Empty, tempPath, keyPassword ?? string.Empty);
+                        SigningHelper.SignAssembly(tempPath, keyPath ?? string.Empty, Path.GetDirectoryName(tempPath), keyPassword ?? string.Empty);
 
                         using (var stream = new FileStream(tempPath, FileMode.OpenOrCreate, FileAccess.Read))
                         {
