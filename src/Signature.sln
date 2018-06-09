@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Signature.Web", "Signature.Web\Signature.Web.csproj", "{2D07288C-5C6F-4F40-B834-A6D8C2C81A65}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Signature.Core", "Signature.Core\Signature.Core.csproj", "{0CE01A99-2129-472A-9834-6A476286BF17}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{9B87C2CE-9F91-4682-8909-8578BDF03DA3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{B3D20717-0CFF-448A-A95A-8B199FEEE893}"
 	ProjectSection(SolutionItems) = preProject
 		References\Brutal.Dev.StrongNameSigner.dll = References\Brutal.Dev.StrongNameSigner.dll
 	EndProjectSection
@@ -29,5 +29,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7508C75A-1152-4BCD-AFEC-740AD5460BDA}
 	EndGlobalSection
 EndGlobal
